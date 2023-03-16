@@ -10,5 +10,8 @@
     "typescript"
   ],
   "author": "CHOI DAE GEON",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.0.2"
+  }
 }
