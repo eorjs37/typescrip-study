@@ -34,6 +34,17 @@ console.log(person.sayHello());
 tsc src/person.ts
 ```
 
+## tsc init
+
+> tsc 옵션 설정 파일을 생성 하도록 하자.  
+> 명령어 사용후 tsconfig.json이 생성되는것을 확인 할 수 있다.
+
+```bash
+tsc --init
+```
+
+## js 트랜스 파일 후 식별자 중복이 오류가 뜨는 경우
+
 > 위와 같이 트랜스파일 하는 경우 person.js가 생성되며 기본적으로 ES2013으로 변환된다.  
 > 그리고 식별자 중복이 뜬다는 오류가 뜰 경우 root에 tsconfig.json파일 생성하고 아래 코드를 적용한다.
 
@@ -44,3 +55,36 @@ tsc src/person.ts
   }
 }
 ```
+
+## Person2를 상속 받는 Student 만들기
+
+```typescript
+//person2.ts
+export class Person2 {
+  protected name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  sayHello() {
+    return `Hello, ${this.name}`;
+  }
+}
+```
+
+```typescript
+//student.ts
+import { Person2 } from "./person2";
+
+class Student extends Person2 {
+  study(): string {
+    return `${this.name} is studying`;
+  }
+}
+
+const stu = new Student("CHoi");
+console.log(stu.sayHello());
+console.log(stu.study());
+```
+
+tsc 명령어를 통해 js으로 트랜스파일링 후 person.js를 실행시킨다.

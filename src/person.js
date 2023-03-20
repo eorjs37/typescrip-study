@@ -1,11 +1,11 @@
-var Person = /** @class */ (function () {
-    function Person(name) {
+"use strict";
+class Person {
+    constructor(name) {
         this.name = name;
     }
-    Person.prototype.sayHello = function () {
+    sayHello() {
         return "Hello, " + this.name;
-    };
-    return Person;
-}());
-var person = new Person("Lee");
+    }
+}
+const person = new Person("Lee");
 console.log(person.sayHello());
