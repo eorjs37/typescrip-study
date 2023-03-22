@@ -10,3 +10,4 @@ class Person2 {
     }
 }
 exports.Person2 = Person2;
+//# sourceMappingURL=person2.js.map
