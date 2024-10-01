@@ -36,7 +36,7 @@ tsc src/person.ts
 
 ## tsc init
 
-> tsc 옵션 설정 파일을 생성 하도록 하자.  
+> tsc 옵션 설정 파일을 생성 하도록 하자.
 > 명령어 사용후 tsconfig.json이 생성되는것을 확인 할 수 있다.
 
 ```bash
@@ -45,7 +45,7 @@ tsc --init
 
 ## js 트랜스 파일 후 식별자 중복이 오류가 뜨는 경우
 
-> 위와 같이 트랜스파일 하는 경우 person.js가 생성되며 기본적으로 ES2013으로 변환된다.  
+> 위와 같이 트랜스파일 하는 경우 person.js가 생성되며 기본적으로 ES2013으로 변환된다.
 > 그리고 식별자 중복이 뜬다는 오류가 뜰 경우 root에 tsconfig.json파일 생성하고 아래 코드를 적용한다.
 
 ```json
@@ -88,3 +88,10 @@ console.log(stu.study());
 ```
 
 tsc 명령어를 통해 js으로 트랜스파일링 후 person.js를 실행시킨다.
+
+
+## null and undefined
+```
+기본적으로는 null 과 undefined는 모든타입의 하위타입이다. 즉 number,string은 가진 변수에 null,undefined를 할당할 수 있다.
+하지만 strictNullChecks를 설정하면, null,undefined는 오직 any와 각자 자신들 타입에만 할당 가능하다.
+```

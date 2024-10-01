@@ -1,0 +1,13 @@
+# 타입
+- Boolean
+- Number
+- String
+- Array
+- Tuple
+- Enum
+- Any
+- Void
+- Null and Undefined
+- Never
+- 객체 (Object)
+- 타입 단언 (Type assertions)
